@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine Card</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="animations.css">
+</head>
+<body>
+
+<video loop class="video-background" id="videoBackground" style="display: none;">
+  <source src="assets/My Movie 1.mp4" type="video/mp4">
+</video>
+
+<div class="present-container" onclick="toggleVisibility()">
+  <div class="ribbon"></div>
+  <div class="ribbon-vertical"></div>
+  <img src="assets/heart.png" alt="Heart" class="heart-image">
+</div>
+
+<div class="letter-content" id="letterContent">
+  <h1 class="reveal-animation">Will You Be My Valentine? &hearts;</h1>
+</div>
+
+<button class="restart-button" id="restartButton" onclick="restartEverything()">Restart</button>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <h2>To: whom <br> From: whom </h2>
+    <p class="reveal-animation">Write Paragraph Here</p>
+    <img src="assets/flower.png" alt="Flower" class="flower-float" />
+    <button class="continue-btn" onclick="playVideo()">Continue</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
