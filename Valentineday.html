@@ -126,7 +126,7 @@
     text-align: center;
     z-index: 20;
     opacity: 0;
-    transition: transform 0.5s ease, opacity 1s ease; /* Adjusted the opacity transition */
+    transition: transform 0.5s ease, opacity 1s ease;
   }
 
   .letter-content.visible {
@@ -187,7 +187,7 @@
     display: block;
   }
 
-  /* Styles for Modal */
+  /* Styles */
   .modal {
     
     display: none; /* Hidden by default */
@@ -233,11 +233,11 @@
     border: 3px solid pink;
     padding: 80px;
     height: 60%;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%; /* Depends on screen size */
     text-align: center;
     font-family: 'Brush Script MT', cursive; /* Same font as Valentine message */
     color: rgb(250, 143, 168);
-    font-size: 1.5em; /* Adjust as needed */
+    font-size: 1.5em; /* Adjust font */
     font-weight: bold;
   }
   
@@ -262,7 +262,7 @@
     background-color: rgb(220, 50, 50);
   }
 
-  /* Custom CSS for floating flower */
+  /* Floating flower */
   .flower-float {
     animation: floatFlower 3s ease-in-out infinite;
   }
@@ -295,11 +295,11 @@
 
 <button class="restart-button" id="restartButton" onclick="restartEverything()">Restart</button>
 
-<!-- The Modal -->
+
 <div id="myModal" class="modal">
   <div class="modal-content">
-    <h2>To: Emma Lim <br> From: Josh </h2>
-    <p class="reveal-animation">From the moment I saw you, I knew you were the one. It was as if every step I had taken in my life had led me to that moment. From your beautiful smile to your infectious laughter, everything about you brought light into my life, making every day brighter for me. Your love during my weakest days and your endless support have shaped me into who I am today. As we look ahead at this very moment in our lives, I'm excited to know I'll be growing old with you. Every day with you becomes a cherished memory in my life. You are the best thing to have ever happened to me, the greatest joy I have in life, and with every day that passes, I am grateful that you're in my life and can't wait for our future together.</p>
+    <h2>To: whom <br> From: whom </h2>
+    <p class="reveal-animation">Write Paragraph Here</p>
     <img src="flower.png" alt="Flower" class="flower-float" />
     <button class="continue-btn" onclick="playVideo()">Continue</button>
   </div>
@@ -327,21 +327,21 @@
 
 function showModal() {
   const modal = document.getElementById('myModal');
-  modal.classList.remove('hidden'); // Remove hidden first for a repaint to occur
-  modal.classList.add('show'); // Add 'show' to trigger the animation
+  modal.classList.remove('hidden'); 
+  modal.classList.add('show'); // Triggers animation
 }
 
 function playVideo() {
   const video = document.getElementById('videoBackground');
   const modal = document.getElementById('myModal');
   const restartButton = document.getElementById('restartButton');
-  const letterH1 = document.querySelector('.letter-content h1'); // Get the h1 element
+  const letterH1 = document.querySelector('.letter-content h1'); 
 
   video.play();
-  modal.classList.add('hidden'); // Add hidden to hide the modal
+  modal.classList.add('hidden'); 
   modal.classList.remove('show'); // Remove 'show' to reset the animation
   restartButton.classList.add('visible');
-  letterH1.classList.add('animate-text'); // Add class to animate the text
+  letterH1.classList.add('animate-text'); 
 }
 
 function restartEverything() {
@@ -351,7 +351,7 @@ function restartEverything() {
   const restartButton = document.getElementById('restartButton');
   const modal = document.getElementById('myModal');
   const body = document.body;
-  const letterH1 = document.querySelector('.letter-content h1'); // Get the h1 element
+  const letterH1 = document.querySelector('.letter-content h1'); 
   letterH1.classList.remove('animate-text');
 
   presentContainer.classList.remove('hidden');
@@ -364,7 +364,7 @@ function restartEverything() {
   modal.classList.add('hidden');
   modal.classList.remove('show'); // Ensure 'show' is removed when restarting
 
-  // Trigger reflow/repaint
+  
   void modal.offsetHeight;
 }
 
